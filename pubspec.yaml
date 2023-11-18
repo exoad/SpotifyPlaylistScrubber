@@ -10,6 +10,8 @@ dependencies:
   envied: ^0.5.1
   flutter:
     sdk: flutter
+  simple_logger: ^1.9.0+3
+  spotify: ^0.12.0
 
 dev_dependencies:
   flutter_test:
