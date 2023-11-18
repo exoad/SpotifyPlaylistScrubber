@@ -31,9 +31,34 @@ class _PlaylistsListViewState extends State<PlaylistsListView> {
       widgets.add(Padding(
         padding:
             const EdgeInsets.symmetric(vertical: 4, horizontal: 6),
-        child: wrapTag(
-            child: Text(element.name ?? "??", style: LaF.normalText),
-            color: LaF.primary1),
+        child: Row(
+          children: <Widget>[
+            generateRandomGradient(),
+            wrapTag(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(element.name ?? "??",
+                        style: const TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 16,
+                            color: Colors.black)),
+                    const SizedBox(height: 12),
+                    Text(
+                        element.description == null ||
+                                element.description!.isEmpty
+                            ? "--"
+                            : element.description!,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 12,
+                            color: LaF.primary1))
+                  ],
+                ),
+                color: Colors.transparent),
+          ],
+        ),
       ));
     }
     return widgets;
