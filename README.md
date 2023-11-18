@@ -34,9 +34,9 @@ SPOTIFY_CLIENT_SECRET=place client secret here
 > [!NOTE]
 > I do not plan to release/adapt this app for mobile platforms because of the increased complexity and need to focus on multiple platforms.
 
-| Platform        	| Flavors             	| Supported 	| Tested 	| Notes                    	|
-|-----------------	|---------------------	|-----------	|--------	|--------------------------	|
-| Linux           	| `6.1.62-1`          	| 🟢         	| 🟢      	| Test against MANJARO-KDE 	|
-| MacOS (OSX)     	|                     	| 🟡         	| 🔴      	|                          	|
-| Windows (Win32) 	| `10`, `11`          	| 🟢         	| 🔴      	|                          	|
-| Web             	| `Firefox`, `Chrome` 	| 🔴         	| 🟡      	|                          	|
+| Platform        	| Flavors             	| Performance 	| Support     	| Testing     	| Notes                    	|
+|-----------------	|---------------------	|-------------	|-------------	|-------------	|--------------------------	|
+| Linux           	| `6.1.62-1`          	| 🟢 - GOOD    	| 🟢 - YES     	| 🟢 - TESTED  	| Test against MANJARO-KDE 	|
+| MacOS (OSX)     	|                     	| ⚫ - N/A     	| 🟡 - MAYBE   	| 🔴 - NONE    	|                          	|
+| Windows (Win32) 	| `10`, `11`          	| ⚫ - N/A     	| 🟢 - YES     	| 🔴 - NONE    	|                          	|
+| Web             	| `Firefox`, `Chrome` 	| ⚫ - N/A     	| 🔴 - MINIMAL 	| 🟡 - PENDING 	|                          	|
