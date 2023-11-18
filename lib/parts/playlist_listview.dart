@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:spotify/src/models/_models.dart' as spotify;
-import 'package:spotify_playlist_scrubber/bits/physics.dart';
 import 'package:spotify_playlist_scrubber/bits/themes.dart';
 import 'package:spotify_playlist_scrubber/parts/parts.dart';
 import 'package:spotify_playlist_scrubber/shared.dart';
@@ -161,13 +160,9 @@ class _PlaylistsListViewState extends State<PlaylistsListView> {
                 color: LaF.primary2),
           );
         } else {
-          return ListView(
-            addRepaintBoundaries: true,
-            physics: const SmoothDelayScrollPhysics(
-                parent: AlwaysScrollableScrollPhysics(),
-                delay: 0.5,
-                softness: 10),
-            children: snapshot.data!,
+          return SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
+            child: Column(children: snapshot.data!),
           );
         }
       },
