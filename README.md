@@ -7,11 +7,14 @@ Download (aka 'scrub') a Spotify playlist to download songs/music from an altern
 
 # Building
 
-For now, to run and build the application properly, you must enter your own Spotify ID and Spotify Secret (acquired through the Spotify Developer Portal).
+1.  Clone this repository with `git clone https://github.com/exoad/SpotifyPlaylistScrubber.git`
 
-1. Acquire a `Client ID` and `Client Secret` from the Spotify Developer Portal. [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
-2. Create a `.env` file at the root of this project
-3. Write and fill out the following in the `.env` file you have created:
+> [!IMPORTANT]
+> For now, to run and build the application properly, you must enter your own Spotify ID and Spotify Secret (acquired through the Spotify Developer Portal).
+
+2. Acquire a `Client ID` and `Client Secret` from the Spotify Developer Portal. [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
+3. Create a `.env` file at the root of this project
+4. Write and fill out the following in the `.env` file you have created:
 ```
 SPOTIFY_CLIENT_ID=place client id here
 SPOTIFY_CLIENT_SECRET=place client secret here
