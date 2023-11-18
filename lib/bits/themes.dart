@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class LaF {
   static final BorderRadius themeBorderRadius =
-      BorderRadius.circular(6);
+      BorderRadius.circular(8);
   static const TextStyle emphasisText =
       TextStyle(fontWeight: FontWeight.w800, color: Colors.black);
   static const TextStyle normalText =
@@ -13,5 +13,15 @@ class LaF {
   static const Color primary2 = Color.fromARGB(255, 250, 82, 134);
   static const Color bg = Colors.white;
 
-  static ThemeData theme() => ThemeData();
+  static ThemeData theme() => ThemeData(
+      floatingActionButtonTheme: FloatingActionButtonThemeData(
+          elevation: 8,
+          hoverElevation: 14,
+          splashColor: LaF.primary1
+            ..withOpacity(0.2)
+            ..withAlpha(50),
+          backgroundColor: LaF.bg,
+          foregroundColor: LaF.primary1,
+          shape: RoundedRectangleBorder(
+              borderRadius: themeBorderRadius)));
 }

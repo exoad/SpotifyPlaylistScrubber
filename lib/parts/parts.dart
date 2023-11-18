@@ -7,6 +7,16 @@ export 'app.dart';
 
 export 'playlist_listview.dart';
 
+Widget clickableButton(
+    {required Widget child,
+    void Function()? onPressed,
+    Color color = LaF.primary1}) {
+  return GestureDetector(
+    onTap: onPressed,
+    child: wrapTag(color: color, child: child),
+  );
+}
+
 Widget blurWidget({
   required Widget child,
   double sigmaX = 5.0,
@@ -26,8 +36,12 @@ Widget blurWidget({
 Widget wrapTag(
         {required Widget child,
         required Color color,
-        double innerPadding = 8.0}) =>
+        double innerPadding = 8.0,
+        double? width,
+        double? height}) =>
     Container(
+        width: width,
+        height: height,
         decoration: BoxDecoration(
             color: color, borderRadius: LaF.themeBorderRadius),
         child: Padding(
