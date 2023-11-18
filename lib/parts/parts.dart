@@ -36,7 +36,9 @@ Widget wrapTag(
         ));
 
 Widget generateRandomGradient(
-    [List<Color>? colors, double width = 128, double height = 128]) {
+    [List<Color>? colors,
+    double width = LaF.ARTWORK_LISTVIEW_SIZE,
+    double height = LaF.ARTWORK_LISTVIEW_SIZE]) {
   colors ??= randomColors(2, 3);
   List<Alignment> alignments = <Alignment>[
     Alignment.topLeft,

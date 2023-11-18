@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_playlist_scrubber/bits/themes.dart';
 import 'package:spotify_playlist_scrubber/parts/playlist_listview.dart';
 
 class AppWrapper extends StatelessWidget {
@@ -6,6 +7,9 @@ class AppWrapper extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(debugShowCheckedModeBanner: false, home: Scaffold(body: PlaylistsView()));
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: const Scaffold(body: PlaylistsView()),
+        theme: LaF.theme());
   }
 }

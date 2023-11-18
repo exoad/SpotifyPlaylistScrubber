@@ -10,6 +10,7 @@ dependencies:
   envied: ^0.5.1
   flutter:
     sdk: flutter
+  palette_generator: ^0.3.3+3
   simple_logger: ^1.9.0+3
   spotify: ^0.12.0
 
