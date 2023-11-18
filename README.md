@@ -1,3 +1,5 @@
 # spotify_playlist_scrubber
 
-A new Flutter project.
+**Work in progress**
+
+Download (aka 'scrub') a Spotify playlist to download the songs.
