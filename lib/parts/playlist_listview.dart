@@ -28,6 +28,7 @@ class _PlaylistsListViewState extends State<PlaylistsListView> {
     for (spotify.PlaylistSimple element in (await spotifyApi.playlists
         .getUsersPlaylists("6upazxk1cqaqq1ct3d9jviaau")
         .all())) {
+          
       widgets.add(Padding(
         padding:
             const EdgeInsets.symmetric(vertical: 4, horizontal: 6),
