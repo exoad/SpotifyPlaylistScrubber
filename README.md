@@ -5,6 +5,11 @@
 
 Download (aka 'scrub') a Spotify playlist to download songs/music from an alternate source (such as YouTube).
 
+## Table of contents
+
+* [**Building**](#building)
+* [**Support**](#support)
+
 # Building
 
 1.  Clone this repository with `git clone https://github.com/exoad/SpotifyPlaylistScrubber.git`
