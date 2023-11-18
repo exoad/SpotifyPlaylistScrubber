@@ -23,12 +23,15 @@ Widget blurWidget({
   );
 }
 
-Widget wrapTag({required Widget child, required Color color}) =>
+Widget wrapTag(
+        {required Widget child,
+        required Color color,
+        double innerPadding = 8.0}) =>
     Container(
         decoration: BoxDecoration(
             color: color, borderRadius: LaF.themeBorderRadius),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(innerPadding),
           child: child,
         ));
 

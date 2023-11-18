@@ -39,11 +39,32 @@ class _PlaylistsListViewState extends State<PlaylistsListView> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(element.name ?? "??",
-                        style: const TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 16,
-                            color: Colors.black)),
+                    Flex(
+                      direction: Axis.horizontal,
+                      children: <Widget>[
+                        Flexible(
+                          flex: 0,
+                          child: Text(element.name ?? "??",
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  overflow: TextOverflow.ellipsis,
+                                  fontSize: 16,
+                                  color: Colors.black)),
+                        ),
+                        const SizedBox(width: 14),
+                        Flexible(
+                          flex: 0,
+                          fit: FlexFit.tight,
+                          child: wrapTag(
+                              innerPadding: 4,
+                              child: const Icon(
+                                  Icons.music_note_rounded,
+                                  size: 12,
+                                  color: Colors.white),
+                              color: LaF.primary2),
+                        )
+                      ],
+                    ),
                     const SizedBox(height: 12),
                     Text(
                         element.description == null ||
@@ -53,6 +74,7 @@ class _PlaylistsListViewState extends State<PlaylistsListView> {
                         style: const TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 12,
+                            overflow: TextOverflow.ellipsis,
                             color: LaF.primary1))
                   ],
                 ),
