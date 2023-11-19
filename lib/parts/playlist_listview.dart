@@ -2,9 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:spotify/src/models/_models.dart' as spotify;
-import 'package:spotify_playlist_scrubber/bits/themes.dart';
 import 'package:spotify_playlist_scrubber/parts/parts.dart';
-import 'package:spotify_playlist_scrubber/shared.dart';
+import 'package:spotify_playlist_scrubber/bits/bits.dart';
 
 class PlaylistsView extends StatelessWidget {
   const PlaylistsView({super.key});
@@ -25,9 +24,8 @@ class PlaylistsListView extends StatefulWidget {
 class _PlaylistsListViewState extends State<PlaylistsListView> {
   Future<List<Widget>> getPlayListWidgets() async {
     List<Widget> widgets = <Widget>[];
-    for (spotify.PlaylistSimple element in (await spotifyApi.playlists
-        .getUsersPlaylists("6upazxk1cqaqq1ct3d9jviaau")
-        .all())) {
+    for (spotify.PlaylistSimple element
+        in (await getPlaylists(debugUserID))) {
       widgets.add(Padding(
         padding:
             const EdgeInsets.symmetric(vertical: 4, horizontal: 0),
@@ -108,9 +106,30 @@ class _PlaylistsListViewState extends State<PlaylistsListView> {
                                             : Icons.shield_rounded,
                                     size: 12,
                                     color: Colors.white),
-                                color: LaF.primary1),
+                                color: LaF.primary2),
                           ),
                         ),
+                        if (element.uri != null)
+                          const SizedBox(width: 4),
+                        if (element.uri != null)
+                          Flexible(
+                              flex: 0,
+                              fit: FlexFit.tight,
+                              child: Tooltip(
+                                  message: "Open in browser",
+                                  child: GestureDetector(
+                                    onTap: () async =>
+                                        await launchPlaylistInBrowser_URI(
+                                            element
+                                                .uri!), // above check makes sure element.uri isnt null here
+                                    child: wrapTag(
+                                        innerPadding: 4,
+                                        child: const Icon(
+                                            Icons.link_rounded,
+                                            size: 12,
+                                            color: Colors.white),
+                                        color: LaF.primary1),
+                                  ))),
                       ],
                     ),
                     const SizedBox(height: 12),
