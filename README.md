@@ -25,7 +25,7 @@ SPOTIFY_CLIENT_ID=place client id here
 SPOTIFY_CLIENT_SECRET=place client secret here
 ```
 4. Make sure you have `build_runner` and `envied_builder` installed. (hint: try running `flutter pub get`)
-5. Then run `flutter pub run build_runner build`
+5. Then run `flutter pub run build_runner build` (if you forget this command, the `scripts/generate_env.sh` script can help you)
 6. After that you should have an `env.g.dart` file located next to `env.dart`
 7. `flutter run`
 
