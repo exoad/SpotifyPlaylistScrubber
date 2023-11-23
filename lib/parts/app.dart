@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_playlist_scrubber/bits/themes.dart';
+import 'package:spotify_playlist_scrubber/parts/input_view.dart';
 import 'package:spotify_playlist_scrubber/parts/parts.dart';
 
 enum _SearchFormEntry {
@@ -37,12 +38,11 @@ class _CascadedFloatingNavMenuState
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<_SearchFormEntry>(
-        surfaceTintColor: LaF.primary1
-          ..withOpacity(0.2)
-          ..withAlpha(50),
+        shadowColor: Colors.black,
         elevation: 8,
+        color: Colors.black,
         offset: Offset(
-            -70, -50 * _SearchFormEntry.values.length.toDouble()),
+            -60, -50 * _SearchFormEntry.values.length.toDouble()),
         shape: RoundedRectangleBorder(
             borderRadius: LaF.themeBorderRadius),
         itemBuilder: (BuildContext context) {
@@ -54,7 +54,7 @@ class _CascadedFloatingNavMenuState
               value: entry,
               child: Row(
                 children: <Widget>[
-                  Icon(entry.icon),
+                  Icon(entry.icon, color: LaF.bg),
                   const SizedBox(width: 6),
                   Text(entry.title,
                       style: TextStyle(
@@ -115,15 +115,21 @@ class _AppWrapperState extends State<AppWrapper> {
         ),
         floatingActionButtonLocation:
             FloatingActionButtonLocation.endFloat,
-        body: PageView(
-          controller: _pageController,
-          physics: const NeverScrollableScrollPhysics(),
-          children: <Widget>[
-            const StartingBlankView(),
-            Container(color: Colors.red),
-            Container(color: Colors.blue),
-            Container(color: Colors.green),
-          ],
+        body: Scrubber_BackdropLineArt.wrap(
+          child: PageView(
+            controller: _pageController,
+            physics: const NeverScrollableScrollPhysics(),
+            children: <Widget>[
+              const StartingBlankView(),
+              Container(color: Colors.red),
+              Container(color: Colors.blue),
+              TextInputView(
+                  hint:
+                      "The string after \"https://open.spotify.com/user/\"",
+                  onChanged: (String str, BuildContext context) {},
+                  title: "User ID"),
+            ],
+          ),
         ),
       ),
       theme: LaF.theme(),

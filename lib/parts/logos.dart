@@ -2,6 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:spotify_playlist_scrubber/bits/bits.dart';
 
 final class Scrubber_BackdropLineArt extends CustomPainter {
+  static Widget wrap(
+      {Color bgColor = LaF.bg, required Widget child}) {
+    return Container(
+      color: bgColor,
+      child: CustomPaint(
+        painter: Scrubber_BackdropLineArt(),
+        child: child,
+      ),
+    );
+  }
+
   static const double desiredSpacing = 34.0;
   static const double spacingMultiplier = 1.2;
 
