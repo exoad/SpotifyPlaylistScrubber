@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 export "themes.dart";
 export "spotify.dart";
@@ -23,8 +22,6 @@ List<Color> randomColors(int min, int max) {
   }
   return colors;
 }
-
-
 
 T pickRandom<T>(List<T> elements) {
   return elements[rng.nextInt(elements.length)];

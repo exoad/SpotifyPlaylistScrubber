@@ -15,11 +15,8 @@ class LaF {
 
   static ThemeData theme() => ThemeData(
       floatingActionButtonTheme: FloatingActionButtonThemeData(
-          elevation: 8,
           hoverElevation: 14,
-          splashColor: LaF.primary1
-            ..withOpacity(0.2)
-            ..withAlpha(50),
+
           backgroundColor: LaF.bg,
           foregroundColor: LaF.primary1,
           shape: RoundedRectangleBorder(
