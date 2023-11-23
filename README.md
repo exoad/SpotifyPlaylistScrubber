@@ -39,4 +39,3 @@ SPOTIFY_CLIENT_SECRET=place client secret here
 | Linux           	| `6.1.62-1`          	| 🟢 - GOOD    	| 🟢 - YES     	| 🟢 - TESTED  	| Test against MANJARO-KDE 	|
 | MacOS (OSX)     	|                     	| ⚫ - N/A     	| 🟡 - MAYBE   	| 🔴 - NONE    	|                          	|
 | Windows (Win32) 	| `10`, `11`          	| ⚫ - N/A     	| 🟢 - YES     	| 🔴 - NONE    	|                          	|
-| Web             	| `Firefox`, `Chrome` 	| ⚫ - N/A     	| 🔴 - MINIMAL 	| 🟡 - PENDING 	|                          	|
