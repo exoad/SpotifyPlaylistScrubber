@@ -6,6 +6,8 @@ import 'package:spotify_playlist_scrubber/bits/bits.dart';
 export 'app.dart';
 
 export 'playlist_listview.dart';
+export 'blank_screen.dart';
+export 'logos.dart';
 
 Widget clickableButton(
     {required Widget child,

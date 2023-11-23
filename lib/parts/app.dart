@@ -30,11 +30,7 @@ class _AppWrapperState extends State<AppWrapper> {
                 )),
             floatingActionButtonLocation:
                 FloatingActionButtonLocation.endFloat,
-            body: const Column(
-              children: <Widget>[
-                Expanded(child: PlaylistsListView()),
-              ],
-            )),
+            body: const StartingBlankView()),
         theme: LaF.theme());
   }
 }
