@@ -10,7 +10,7 @@ class StartingBlankView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            "Search for a playlist",
+            "Scrub a playlist",
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
